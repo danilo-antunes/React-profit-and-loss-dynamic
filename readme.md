@@ -1,6 +1,6 @@
 Clone repository
 
-Run nmp install
+Run npm install
 run npm start
 
 The backend is already deployed in a Heroku server.
