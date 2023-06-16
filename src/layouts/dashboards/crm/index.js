@@ -34,7 +34,7 @@ function CRM() {
 
   const getExpense = async () => {
     try {
-      const res = await axios.get('http://localhost:8800');
+      const res = await axios.get('https://pnl-api-5813ec458557.herokuapp.com');
       setExpanse(res.data.sort((a, b) => (a.name > b.name ? 1 : -1)));
     } catch (error) {
       toast.error(error);
@@ -47,7 +47,7 @@ function CRM() {
 
   const getIncome = async () => {
     try {
-      const res = await axios.get('http://localhost:8800/income');
+      const res = await axios.get('https://pnl-api-5813ec458557.herokuapp.com/income');
       setIncome(res.data.sort((a, b) => (a.name > b.name ? 1 : -1)));
     } catch (error) {
       toast.error(error);
@@ -61,7 +61,7 @@ function CRM() {
 
   const getTotal = async () => {
     try {
-      const res = await axios.get('http://localhost:8800/total');
+      const res = await axios.get('https://pnl-api-5813ec458557.herokuapp.com/total');
       setTotal(res.data.sort((a, b) => (a.name > b.name ? 1 : -1)));
     } catch (error) {
       toast.error(error);
@@ -75,7 +75,7 @@ function CRM() {
 
   const getTotalExpanse = async () => {
     try {
-      const res = await axios.get('http://localhost:8800/totalexpense');
+      const res = await axios.get('https://pnl-api-5813ec458557.herokuapp.com/totalexpense');
       setTotalExpanse(res.data.sort((a, b) => (a.name > b.name ? 1 : -1)));
     } catch (error) {
       toast.error(error);
@@ -89,7 +89,7 @@ function CRM() {
 
   const getNetIncome = async () => {
     try {
-      const res = await axios.get('http://localhost:8800/netincome');
+      const res = await axios.get('https://pnl-api-5813ec458557.herokuapp.com/netincome');
       setNetIncome(res.data.sort((a, b) => (a.name > b.name ? 1 : -1)));
     } catch (error) {
       toast.error(error);
