@@ -66,7 +66,7 @@ function RankingList({ title, secondtitle, date, income, expense, total, totalex
   const handleDelete = async (id) => {
     await axios
       // eslint-disable-next-line prefer-template
-      .delete('http://localhost:8800/' + id)
+      .delete('https://pnl-api-5813ec458557.herokuapp.com/' + id)
       .catch(({ data }) => toast.error(data));
       getExpense();
       getIncome();
