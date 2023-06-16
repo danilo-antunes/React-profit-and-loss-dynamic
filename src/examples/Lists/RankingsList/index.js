@@ -324,7 +324,7 @@ function RankingList({ title, secondtitle, date, income, expense, total, totalex
 
   
 
-  const netTaxes = netincome.map(({ type, value }, key) => (
+  const netTaxes = total.map(({ type, value }, key) => (
     <ArgonBox key={type}>
       <ArgonBox display="flex" justifyContent="space-between" alignItems="center">
         <ArgonBox display="flex" alignItems="center">
@@ -362,7 +362,7 @@ function RankingList({ title, secondtitle, date, income, expense, total, totalex
           </ArgonBox>
         </ArgonBox>
         <ArgonTypography variant="button" color={value > 0 ? "success" : "error"} fontWeight="medium" textGradient>
-          {"$ " + (value - getConvertedPrice(value))}
+          {"$ " + (value - getConvertedPrice(total[0].value))}
         </ArgonTypography>
       </ArgonBox>
       {key === total.length - 1 ? null : (
