@@ -62,7 +62,7 @@ function CRM() {
   const getTotal = async () => {
     try {
       const res = await axios.get('https://pnl-api-5813ec458557.herokuapp.com/total');
-      setTotal(res.data.sort((a, b) => (a.name > b.name ? 1 : -1)));
+      res.data.length === 0 ? setTotal([{type: "" , value: 0}]) : setTotal(res.data.sort((a, b) => (a.name > b.name ? 1 : -1)));
     } catch (error) {
       toast.error(error);
     }
