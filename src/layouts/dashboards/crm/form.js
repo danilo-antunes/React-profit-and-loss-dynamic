@@ -65,7 +65,7 @@ function NewUser({ getExpense, getIncome, getNetIncome, getTotal, getTotalExpans
 
   const submitFormExpense = async (values, actions) => {
     await axios
-      .post("http://localhost:8800", {
+      .post("https://pnl-api-5813ec458557.herokuapp.com", {
         description: values.description,
         amount: values.amount,
         record_type: "error",
